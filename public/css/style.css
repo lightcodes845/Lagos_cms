@@ -1,0 +1,165 @@
+/*=============RESET CSS=============*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+
+	border-spacing: 0;
+}
+
+
+.page-header {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+nav ul{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+a.icon {
+    display: none;
+  }
+
+.page-header{
+	height: 67px;
+	width: 100%;
+	background-color: #f7c61d;	
+}
+
+.nav-overlay{
+    background-color: #f7c61d;
+    padding-left: 25px;
+    display: none;
+
+
+}
+
+.nav-overlay ul li{
+    padding-bottom: 10px;
+}
+
+.nav-overlay a{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+.nav-overlay a:hover{
+    color: white;
+}
+
+.header-logo a{
+    text-transform: uppercase;
+    font-size: 40px;
+    text-decoration: none;
+    color: black;
+}
+
+
+.page-header nav a{	
+	color: black;
+	text-transform: uppercase;
+	text-decoration: none;
+    padding: 0 35px;
+    height: 100%;
+}
+
+
+
+.page-header nav a:hover{
+    color: white;
+}
+
+
+@media screen and (max-width: 576px) {
+    .page-header nav {display: none;}
+
+    a.icon {
+      float: right;
+      display: block;
+    }
+    .header-logo a {
+        float: left;
+        display: block;
+      }
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+
+    .nav-overlay.responsive {display: block;}    
+    
+  }
+
+@media screen and (max-width: 768px) {
+    .page-header nav {display: none;}
+
+    a.icon {
+        float: right;
+        display: block;
+    }
+    .header-logo a {
+        float: left;
+        display: block;
+    }
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .nav-overlay.responsive {display: block;}
+
+}
