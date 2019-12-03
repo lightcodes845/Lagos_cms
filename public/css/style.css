@@ -105,7 +105,13 @@ a.icon {
     height: 100%;
 }
 
+.carousel_slider{
+    margin-top: 5px;
+}
 
+.page-main{
+    margin-top: 5px;
+}
 
 .page-header nav a:hover{
     color: white;
@@ -163,3 +169,130 @@ a.icon {
     .nav-overlay.responsive {display: block;}
 
 }
+
+/** MAIN **/
+article{
+    display: flex;
+    margin: 20px 0;
+}
+
+article h3{
+    font-weight: 300;
+    font-size: 20px;
+}
+
+/*.row-articles{*/
+/*    margin: 60px 0;*/
+/*}*/
+
+.page-main{
+    margin: 20px 0;
+}
+
+.meta span::after{
+    display: inline-block;
+    content: "|";
+    color: black;
+    font-size: 13px;
+    padding: 0 5px;
+}
+
+.meta span:last-child::after{
+    display: none;
+}
+
+.meta{
+    margin: 10px 0;
+}
+
+.additional span::after{
+    display: inline-block;
+    content: "|";
+    color: black;
+    font-size: 13px;
+    padding: 0 5px;
+}
+
+.additional span:nth-child(2)::after{
+    display: none;
+}
+
+.btn-details{
+    float: right;
+}
+
+.description{
+    text-align: justify;
+}
+.article-left{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-left img{
+    width: 100%;
+    margin: 10px 0;
+
+}
+
+.article-right{
+    width: 70%;
+}
+
+/*.views::before, .comments::before{*/
+/*    content: "\f06e";*/
+/*    font-family: "Font Awesome 5 Free";*/
+/*    font-size: 13px;*/
+/*    margin-right: 10px;*/
+/*}*/
+
+/*.comments::before{*/
+/*    content: "\f075";*/
+/*    color: #999;*/
+/*}*/
+
+/* FOOTER */
+.page-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #f7c61d;
+    width: 100%;
+    height: 70px;
+}
+
+.page-footer ul {
+    display: flex;
+}
+
+.page-footer ul li {
+    padding: 0 15px;
+}
+
+.page-footer ul a{
+    text-decoration: none;
+}
+
+.page-footer ul a:hover{
+    color: white;
+}
+
+.socials{
+    display: flex;
+}
+.socials a{
+    padding: 0 15px;
+    margin: 0 10px;
+    border-radius: 50%;
+    background: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
