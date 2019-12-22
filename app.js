@@ -1,37 +1,28 @@
 let express = require('express');
 let app = express();
 let mongoose = require('mongoose');
-let Post = require('./models/posts').Post;
+// allows us to redirect requests to another file
+let postRouter = require('./routes/posts');
+//multer is used for receiving files from the front end
+let multer = require('multer');
+
 
 mongoose.connect('mongodb://localhost/Lagos', { useNewUrlParser: true });
 // Convert to JSON format, so we can receive data in JSON format
 app.use(express.json());
-let id = 1;
-
-app.get('/posts', async (req,resp) => {
-   let posts = await Post.find();
-   resp.send(posts);
+//specify the key of the file to be uploaded and the destination to save the file
+let imageStorage = multer.diskStorage({
+   destination: (req, file, cb) => cb(null, 'public/images'),
+   filename: (req, file, cb) => cb(null, file.originalname)
 });
+app.use(multer({storage: imageStorage}).single('imageFile'));
 
-app.post('/posts', async (req,resp) => {
-   let reqBody = req.body;
-   let newPost = new Post({
-      id: id++,
-      title: reqBody.title,
-      date: new Date(),
-      author: reqBody.author,
-      genre: reqBody.genre,
-      description: reqBody.description,
-      text: reqBody.text,
-      imageURL: reqBody.imageURL
-   });
 
-   await newPost.save();
-   resp.send('created!');
-
-});
 
 //for viewing files in public
 app.use(express.static('public'));
+
+// allows us to redirect requests to another file
+app.use('/posts', postRouter);
 
 app.listen(3000, ()=> console.log('Listening 3000...'))

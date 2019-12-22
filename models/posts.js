@@ -10,7 +10,7 @@ let commentSchema = new Schema({
 });
 
 let postSchema = new Schema({
-    id: Number,
+    id: String,
     title: String,
     date: Date,
     author: String,

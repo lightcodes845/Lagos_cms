@@ -429,6 +429,7 @@ article h3{
     border: 1px solid red;
 }
 
-.title, .authorname, .text{
+.title, .authorname, .text, .update-title, .update-authorname,
+.update-text{
     display: none;
 }
